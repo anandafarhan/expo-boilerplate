@@ -1,28 +1,28 @@
 import React from 'react';
+import { LogBox } from 'react-native';
+import { Provider } from 'react-redux';
 import { StatusBar } from 'expo-status-bar';
-import { LogBox, StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
+import { PersistGate } from 'redux-persist/integration/react';
+import { NavigationContainer } from '@react-navigation/native';
+
+import Routes from './Routes';
+import store, { persistor } from './stores';
 
 enableScreens();
 LogBox.ignoreAllLogs(true);
 
-export default function App():React.ReactNode {
+export default function App(): React.ReactNode {
 	return (
-		<NavigationContainer>
-			<View style={styles.container}>
-				<Text>Open up App.js to start working on your app!</Text>
-				<StatusBar style="auto" />
-			</View>
-		</NavigationContainer>
+		<>
+			<StatusBar style='auto' animated />
+			<Provider store={store}>
+				<PersistGate persistor={persistor}>
+					<NavigationContainer>
+						<Routes />
+					</NavigationContainer>
+				</PersistGate>
+			</Provider>
+		</>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});

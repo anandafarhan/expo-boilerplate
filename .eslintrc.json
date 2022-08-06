@@ -1,29 +1,19 @@
 {
-    "env": {
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "import",
-        "react",
-        "prettier",
-        "react-native",
-        "react-hooks",
-        "@typescript-eslint"
-    ],
-    "settings": {
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["plugin:react/recommended", "prettier"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["import", "react", "prettier", "react-native", "react-hooks", "@typescript-eslint"],
+	"settings": {
 		"react": {
 			"version": "detect"
 		},
@@ -34,72 +24,57 @@
 		}
 	},
 
-    "rules":{
-        "no-console":1,
-        "import/first":1,
-        "import/newline-after-import":1,
-        "import/no-cycle":2,
-        "import/no-duplicates":1,
-        "import/no-unresolved":0,
-        "import/no-unused-modules":1,
-        "prettier/prettier":0,
-        "react/react-in-jsx-scope": "off",
-        "react-native/no-color-literals":0,
-        "react-native/no-inline-styles":0,
-        "react-native/no-single-element-style-arrays":1,
-        "react-native/no-unused-styles":1,
-        "react-hooks/rules-of-hooks":"error",
-        "react-hooks/exhaustive-deps":0,
-        "@typescript-eslint/explicit-function-return-type":[
-           1,
-           {
-              "allowExpressions":true,
-              "allowTypedFunctionExpressions":true
-           }
-        ],
-        "@typescript-eslint/explicit-module-boundary-types":0,
-        "@typescript-eslint/no-empty-interface":1,
-        "@typescript-eslint/no-unused-vars":[
-           1,
-           {
-              "argsIgnorePattern":"^_"
-           }
-        ],
-        "@typescript-eslint/no-use-before-define":0,
-        "@typescript-eslint/comma-dangle":[
-           "error",
-           "only-multiline"
-        ],
-        "@typescript-eslint/no-var-requires":0,
-        "@typescript-eslint/no-explicit-any":0,
-        "react/prop-types":[
-           "error",
-           {
-              "ignore":[
-                 "navigation",
-                 "navigation.navigate"
-              ]
-           }
-        ],
-        "react/display-name":0,
-        "linebreak-style":[
-           "error",
-           "unix"
-        ],
-        "indent":[
-           "error",
-           "tab"
-        ],
-        "quotes":[
-           "error",
-           "single",
-           {
-              "avoidEscape":true
-           }
-        ],
-        "semi":[
-           "error",
-           "always"
-        ]
-     }
+	"rules": {
+		"no-console": 1,
+		"import/first": 1,
+		"import/newline-after-import": 1,
+		"import/no-cycle": 2,
+		"import/no-duplicates": 1,
+		"import/no-unresolved": 0,
+		"import/no-unused-modules": 1,
+		"prettier/prettier": 0,
+		"react/react-in-jsx-scope": "off",
+		"react-native/no-color-literals": 0,
+		"react-native/no-inline-styles": 0,
+		"react-native/no-single-element-style-arrays": 1,
+		"react-native/no-unused-styles": 1,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": 0,
+		"@typescript-eslint/explicit-function-return-type": [
+			1,
+			{
+				"allowExpressions": true,
+				"allowTypedFunctionExpressions": true
+			}
+		],
+		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/no-empty-interface": 1,
+		"@typescript-eslint/no-unused-vars": [
+			1,
+			{
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"@typescript-eslint/no-use-before-define": 0,
+		"@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+		"@typescript-eslint/no-var-requires": 0,
+		"@typescript-eslint/no-explicit-any": 0,
+		"react/prop-types": [
+			"error",
+			{
+				"ignore": ["navigation", "navigation.navigate"]
+			}
+		],
+		"react/display-name": 0,
+		"linebreak-style": ["error", "unix"],
+		"indent": ["error", "tab"],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		"semi": ["error", "always"]
+	}
 }
